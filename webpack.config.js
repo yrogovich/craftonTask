@@ -5,10 +5,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const htmlPlugins = generateHtmlPlugins('./src/html/views')
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CssMinimizer = require('css-minimizer-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
-	entry: ['./src/js/index.js', './src/scss/style.scss'],
+	entry: ['babel-polyfill', './src/js/index.js', './src/scss/style.scss'],
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: './js/bundle.js',
@@ -83,15 +84,20 @@ module.exports = {
 					from: './src/fonts',
 					to: './fonts',
 				},
+				{
+					from: './src/mail.php',
+				},
+				{
+					from: './src/.htaccess',
+				},
 			],
 		}),
 		new ImageminWebpWebpackPlugin(),
 	].concat(htmlPlugins),
 	optimization: {
 		minimizer: [
-			// For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-			// `...`,
-			new CssMinimizerPlugin(),
+			new TerserPlugin(),
+			new CssMinimizer(),
 		],
 	},
 }

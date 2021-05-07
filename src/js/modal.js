@@ -1,13 +1,13 @@
 export default class Slider {
-	constructor(...params) {
+	constructor() {
 		const defaults = {
 			dataName: '[data-modal]',
          overlayClass: 'modal-overlay',
 			activeClass: 'modal-active',
 		}
 
-      this.modalLinks = document.querySelectorAll(params.dataName) || document.querySelectorAll(defaults.dataName)
-      this.modalOverlays = document.querySelectorAll(params.dataName) || document.querySelectorAll(defaults.dataName)
+      this.modalLinks = document.querySelectorAll(defaults.dataName)
+      this.modalOverlays = document.querySelectorAll(`.${defaults.overlayClass}`)
 
       this.modalOverlays.forEach((modalOverlay) => {
          modalOverlay.addEventListener('click', function () {
@@ -22,6 +22,7 @@ export default class Slider {
             if(!modal) return
    
             modal.classList.add('modal-active')
+            modal.querySelector('.youtube').click();
          })
       });
    }

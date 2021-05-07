@@ -27,9 +27,8 @@ export function enableValidation() {
 }
 
 // Form handler
-export function enableFormHandler() {
+export function enableFormHandler(url) {
    let forms = document.querySelectorAll('form')
-   let url = `${window.location.protocol}//${window.location.hostname}/mail.php`
 
    forms.forEach((form) => {
       form.addEventListener('submit', function (event) {

@@ -1,7 +1,10 @@
 # Crafton test task
 
 Live site you can see here -- https://travis-ci.org/joemccann/dillinger
-The main feature is that no third-party css and js libraries were used
+
+- The main feature is that no third-party css and js libraries were used
+- Perfect speed and optimization
+- Webpack bundler
 
 ### NPM Commands
 ``` 
@@ -9,6 +12,10 @@ npm run build // For creating production build
 npm run dev   // For developing
 npm run clear // For crear /dsit folder
 ```
+
+### Perfect optimization
+
+[Run pagespeed test](https://developers.google.com/speed/pagespeed/insights/?url=yrogovich.github.io%2Fcraftontask%2F)
 
 ## Task
 Myślę, że ten projekt testowy będzie dobrym sprawdzianem. Zerknij na to i napisz mi co myślisz.
