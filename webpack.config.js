@@ -96,7 +96,9 @@ module.exports = {
 	].concat(htmlPlugins),
 	optimization: {
 		minimizer: [
-			new TerserPlugin(),
+			new TerserPlugin({
+				parallel: true,
+			}),
 			new CssMinimizer(),
 		],
 	},

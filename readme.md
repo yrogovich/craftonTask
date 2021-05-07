@@ -1,23 +1,31 @@
 # Crafton test task
 
-Live site you can see here -- https://travis-ci.org/joemccann/dillinger
+Live site you can see here -- https://yrogovich.github.io/craftonTask/
 
-- The main feature is that no third-party css and js libraries were used
-- Perfect speed and optimization
-- Webpack bundler
+Main features:
+- Perfect seo and speed optimization
+- Beautiful webpack bundler
+- Without using the CSS grid and library
+- As clean as possible JS. Without using third-party libraries
+- Adaptive that works on all resolutions
 
+### Perfect SEO and Speed optimization
+
+[Run pagespeed test](https://developers.google.com/speed/pagespeed/insights/?url=yrogovich.github.io%2Fcraftontask%2F)
+
+<p float="left">
+  <img width="40%" src="https://i.ibb.co/tm9CMLf/crafton-desktop.png" alt="crafton-desktop" border="0"></a>
+  <img width="40%" src="https://i.ibb.co/kQ5zFLs/crafton-mobile.png" alt="crafton-mobile" border="0"></a>
+<p>
+  
 ### NPM Commands
 ``` 
 npm run build // For creating production build
 npm run dev   // For developing
-npm run clear // For crear /dsit folder
+npm run clear // For crear '/dist' folder
 ```
 
-### Perfect optimization
-
-[Run pagespeed test](https://developers.google.com/speed/pagespeed/insights/?url=yrogovich.github.io%2Fcraftontask%2F)
-
-## Task
+### Original Task
 Myślę, że ten projekt testowy będzie dobrym sprawdzianem. Zerknij na to i napisz mi co myślisz.
 Chciałbym żebyś zakodował przykładową stronę serwisu (bez CMS), którą wykorzystujemy do celów rekrutacyjnych:
 https://www.dropbox.com/s/s2l5yurikxnnwvk/projekt-testowy.psd?dl=1 (tutaj znajdziesz fonty: https://www.dropbox.com/s/sydj66w5ec4w5yq/Muli.zip?dl=1)

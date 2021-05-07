@@ -5,7 +5,7 @@ export async function mapLoad(api) {
 	
 	const google = await loader.load();
 
-	const image = '../img/icons/map-pin.png'
+	const image = `${window.location.protocol}//${window.location.hostname}/img/icons/map-pin.png`
 	const point = { lat: 52.40315998103853, lng: 16.90997132280444 }
 	const map = new google.maps.Map(document.getElementById('map'), {
 		center: point,
