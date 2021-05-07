@@ -76,9 +76,14 @@
 		position: absolute;
 		top: 69%;
 	}
-	@media (max-height: 700px) {
+	@media (max-height: 720px) {
 		.slider-controls {
 			top: 80%;
+			margin: -5px;
+			.slider-prev,
+			.slider-next {
+				margin: 5px;
+			}
 		}
 		.slider-pagination {
 			display: none;

@@ -1,4 +1,4 @@
-export default class Slider {
+export default class StickyNavbar {
 	constructor(...args) {
 		let el
 		let params

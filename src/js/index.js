@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Lazyload
 	const myLazyLoad = new LazyLoad()
 
+
 	// Slider
 	const slider1 = new Slider('#slider-main', {
 		btnPrev: '.slider-prev',
@@ -18,16 +19,20 @@ document.addEventListener('DOMContentLoaded', function () {
 		speed: 8000,
 	})
 
+
 	// Sticky
 	const stickyNav = new StickyNav('.navbar')
 
+
 	// Modal
 	const modal = new Modal()
+
 
 	//Forms & inputs
 	let url = `${window.location.protocol}//${window.location.hostname}/mail.php`
 	enableValidation()
 	enableFormHandler(url)
+
 
 	// Menu toggle
 	const menuBurger = document.querySelector('.menu-icon')
@@ -37,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		this.classList.toggle('active')
 		mobileMenu.classList.toggle('active')
 	})
+
 
 	// Google Map
 	setTimeout(() => {
@@ -48,29 +54,18 @@ document.addEventListener('DOMContentLoaded', function () {
 ;(function () {
 	let youtube = document.querySelectorAll('.youtube')
 	for (let i = 0; i < youtube.length; i++) {
-		if (
-			!youtube[i].classList.contains('custom-img') ||
-			(youtube[i].classList.contains('only-img') &&
-				!youtube[i].classList.contains('custom-img') &&
-				youtube[i].classList.contains('only-img'))
-		) {
-			let source =
-				'https://img.youtube.com/vi/' +
-				youtube[i].dataset.embed +
-				'/hqdefault.jpg'
-			let image = new Image()
-			image.src = source
-			image.addEventListener(
-				'load',
-				(function () {
-					youtube[i].appendChild(image)
-				})(i)
-			)
-		}
-
-		if (youtube[i].classList.contains('only-img')) {
-			continue
-		}
+		let source =
+			'https://img.youtube.com/vi/' +
+			youtube[i].dataset.embed +
+			'/hqdefault.jpg'
+		let image = new Image()
+		image.src = source
+		image.addEventListener(
+			'load',
+			(function () {
+				youtube[i].appendChild(image)
+			})(i)
+		)
 
 		youtube[i].addEventListener('click', function () {
 			let iframe = document.createElement('iframe')

@@ -1,4 +1,4 @@
-export default class Slider {
+export default class Modal {
 	constructor() {
 		const defaults = {
 			dataName: '[data-modal]',
