@@ -14,15 +14,15 @@ Main features:
 [Run pagespeed test](https://developers.google.com/speed/pagespeed/insights/?url=yrogovich.github.io%2Fcraftontask%2F)
 
 <p float="left">
-  <img width="40%" src="https://i.ibb.co/tm9CMLf/crafton-desktop.png" alt="crafton-desktop" border="0"></a>
-  <img width="40%" src="https://i.ibb.co/kQ5zFLs/crafton-mobile.png" alt="crafton-mobile" border="0"></a>
+  <img width="40%" src="https://i.ibb.co/tm9CMLf/crafton-desktop.png" alt="crafton-desktop"></a>
+  <img width="40%" src="https://i.ibb.co/kQ5zFLs/crafton-mobile.png" alt="crafton-mobile"></a>
 <p>
   
 ### NPM Commands
 ``` 
 npm run build // For creating production build
 npm run dev   // For developing
-npm run clear // For crear '/dist' folder
+npm run clear // For clear '/dist' folder
 ```
 
 ### Original Task
